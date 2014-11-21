@@ -16,7 +16,7 @@ data <- NEI %>%
 png("plot2.png")
 
 barplot(data$total_emission, names.arg = data$year,
-        main = "Baltimore City, Maryland",
+        main = "Baltimore City",
         xlab = "Year", ylab = "Total PM2.5 emission (tons)")
 
 dev.off()

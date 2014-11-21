@@ -18,11 +18,10 @@ coal_comb_SCCs <- SCC %>%
 data <- NEI %>%
     filter(SCC %in% coal_comb_SCCs) %>%
     filter(year >= 1999, year <= 2008) %>%
-    mutate(year = as.factor(year)) %>%
     group_by(year) %>%
     summarize(total_emission = sum(Emissions))
 
-p <- ggplot(data, aes(x = year, y = total_emission)) +
+p <- ggplot(data, aes(x = factor(year), y = total_emission)) +
     geom_bar(stat = "identity") +
     labs(title = "Coal combustion-related emissions",
          x = "Year", y = "Total PM2.5 emission (tons)")

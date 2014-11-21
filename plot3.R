@@ -19,7 +19,7 @@ data <- NEI %>%
 p <- ggplot(data, aes(x = year, y = total_emission, group = type)) +
     geom_point(aes(colour = type), size = 4.5) +
     geom_line(aes(colour = type), size = 1.5) +
-    labs(title = "Baltimore City, Maryland",
+    labs(title = "Baltimore City",
          x = "Year", y = "Total PM2.5 emission (tons)")
 
 ggsave("plot3.png", p)
