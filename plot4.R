@@ -22,10 +22,9 @@ data <- NEI %>%
     group_by(year) %>%
     summarize(total_emission = sum(Emissions))
 
-p <- ggplot(data, aes(x = year, y = total_emission, group = 1)) +
-    geom_point(size = 4.5) +
-    geom_line(size = 1.5) +
+p <- ggplot(data, aes(x = year, y = total_emission)) +
+    geom_bar(stat = "identity") +
     labs(title = "Coal combustion-related emissions",
-         x = "Year", y = "PM2.5 emission (tons)")
+         x = "Year", y = "Total PM2.5 emission (tons)")
 
 ggsave("plot4.png", p)
