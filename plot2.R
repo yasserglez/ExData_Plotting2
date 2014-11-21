@@ -13,7 +13,7 @@ data <- NEI %>%
     group_by(year) %>%
     summarize(total_emission = sum(Emissions))
 
-png(filename = "plot2.png")
+png("plot2.png")
 
 barplot(data$total_emission, names.arg = data$year,
         main = "Baltimore City, Maryland",

@@ -13,7 +13,7 @@ data <- NEI %>%
     group_by(year) %>%
     summarize(total_emission = sum(Emissions))
 
-png(filename = "plot1.png")
+png("plot1.png")
 
 barplot(data$total_emission, names.arg = data$year,
         xlab = "Year", ylab = "Total PM2.5 emission (tons)")
