@@ -7,6 +7,6 @@ part of the [Data Science Specialization](https://www.coursera.org/specializatio
 Author
 ------
 
-Yasser Gonzalez Fernandez
-* Email - contact@yglezfdez.com
-* Homepage - http://yglezfdez.com
+Yasser Gonzalez
+* Homepage - http://yassergonzalez.com
+* Email - contact@yassergonzalez.com
